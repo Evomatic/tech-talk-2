@@ -69,19 +69,19 @@ const newUser = {
 }
 
 
-// fetch('https://jsonplaceholder.typicode.com/users', {
-//     //supplying request options
-//     method: 'POST',
-//     headers: {
-//         'Content-Type': 'application/json', //telling fetch what we want to send a json file
-// }, 
-// body: JSON.stringify(newUser) //body of the content we want to send. A new user in this case. Must be converted to json
-// })
-// .then(response => response.json())
-// .then(results => console.log('Success:', results))
-// .catch((error) => {
-//     console.log('Error:', error);
-// });
+fetch('https://jsonplaceholder.typicode.com/users', {
+    //supplying request options
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json', //telling fetch what we want to send a json file
+}, 
+body: JSON.stringify(newUser) //body of the content we want to send. A new user in this case. Must be converted to json
+})
+.then(response => response.json())
+.then(results => console.log('Success:', results))
+.catch((error) => {
+    console.log('Error:', error);
+});
 
 
 
@@ -92,19 +92,19 @@ const newUser = {
  */
 
 //point to the user id that we want to update.
-// fetch('https://jsonplaceholder.typicode.com/users/11', {
-//     method: 'PATCH',
-//     headers: {
-//         'Content-Type': 'application/json'
-//     },
-//     body: JSON.stringify({
-//         username: "gryffindor4lyfe"
-//     })
-// }).then(response => response.json())
-// .then(results => console.log('Username updated!', results))
-// .catch((error) => {
-//     console.log('Error:', error);
-// });
+fetch('https://jsonplaceholder.typicode.com/users/11', {
+    method: 'PATCH',
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+        username: "gryffindor4lyfe"
+    })
+}).then(response => response.json())
+.then(results => console.log('Username updated!', results))
+.catch((error) => {
+    console.log('Error:', error);
+});
 
 
 //DELETE - 🔥
@@ -114,11 +114,11 @@ const newUser = {
  */
 
 //point to the user id that we want to delete.
-// fetch('https://jsonplaceholder.typicode.com/users/11', {
-//     method: 'DELETE',
-// })
-// .then(response => response.json())
-// .then(results => console.log('User was deleted!', results));
+fetch('https://jsonplaceholder.typicode.com/users/11', {
+    method: 'DELETE',
+})
+.then(response => response.json())
+.then(results => console.log('User was deleted!', results));
 
 
 
@@ -129,7 +129,7 @@ const newUser = {
  * 
  * 
  * Article: https://evomatic.medium.com/making-post-get-patch-and-delete-requests-using-fetch-in-javascript-aef26c4d385
- * Repository: 
+ * Repository: https://github.com/Evomatic/tech-talk-2
  */
 
 
